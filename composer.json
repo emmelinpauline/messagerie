@@ -1,0 +1,26 @@
+{
+  "name": "paulineemmmelin/messagerie",
+  "require-dev": {
+    "symfony/var-dumper": "^3.2"
+  },
+  "authors": [
+    {
+      "name": "paulineemmelin",
+      "email": "p.emmelin@gmail.com"
+    }
+  ],
+  "require": {
+    "twig/twig": "^2.3"
+  },
+  "autoload": {
+    "psr-4": {
+      "Controller\\": "Controller/",
+      "Helper\\": "Helper/",
+      "Model\\": "Model/"
+    },
+    "files": [
+      "config.php",
+      "Functions/views.php"
+    ]
+  }
+}
