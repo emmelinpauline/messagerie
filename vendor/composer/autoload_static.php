@@ -6,9 +6,80 @@ namespace Composer\Autoload;
 
 class ComposerStaticInit3ce4d8c8e8a87015fcb2251faa1b3978
 {
+    public static $files = array (
+        '0e6d7bf4a5811bfa5cf40c5ccd6fae6a' => __DIR__ . '/..' . '/symfony/polyfill-mbstring/bootstrap.php',
+        '667aeda72477189d0494fecd327c3641' => __DIR__ . '/..' . '/symfony/var-dumper/Resources/functions/dump.php',
+        '56b5f93fbce2f5624105628a1bcb4d08' => __DIR__ . '/../..' . '/config.php',
+        'd0d13f51df87001926b2e53f214410e1' => __DIR__ . '/../..' . '/Functions/views.php',
+    );
+
+    public static $prefixLengthsPsr4 = array (
+        'T' => 
+        array (
+            'Twig\\' => 5,
+        ),
+        'S' => 
+        array (
+            'Symfony\\Polyfill\\Mbstring\\' => 26,
+            'Symfony\\Component\\VarDumper\\' => 28,
+        ),
+        'M' => 
+        array (
+            'Model\\' => 6,
+        ),
+        'H' => 
+        array (
+            'Helper\\' => 7,
+        ),
+        'C' => 
+        array (
+            'Controller\\' => 11,
+        ),
+    );
+
+    public static $prefixDirsPsr4 = array (
+        'Twig\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/twig/twig/src',
+        ),
+        'Symfony\\Polyfill\\Mbstring\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/symfony/polyfill-mbstring',
+        ),
+        'Symfony\\Component\\VarDumper\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/symfony/var-dumper',
+        ),
+        'Model\\' => 
+        array (
+            0 => __DIR__ . '/../..' . '/Model',
+        ),
+        'Helper\\' => 
+        array (
+            0 => __DIR__ . '/../..' . '/Helper',
+        ),
+        'Controller\\' => 
+        array (
+            0 => __DIR__ . '/../..' . '/Controller',
+        ),
+    );
+
+    public static $prefixesPsr0 = array (
+        'T' => 
+        array (
+            'Twig_' => 
+            array (
+                0 => __DIR__ . '/..' . '/twig/twig/lib',
+            ),
+        ),
+    );
+
     public static function getInitializer(ClassLoader $loader)
     {
         return \Closure::bind(function () use ($loader) {
+            $loader->prefixLengthsPsr4 = ComposerStaticInit3ce4d8c8e8a87015fcb2251faa1b3978::$prefixLengthsPsr4;
+            $loader->prefixDirsPsr4 = ComposerStaticInit3ce4d8c8e8a87015fcb2251faa1b3978::$prefixDirsPsr4;
+            $loader->prefixesPsr0 = ComposerStaticInit3ce4d8c8e8a87015fcb2251faa1b3978::$prefixesPsr0;
 
         }, null, ClassLoader::class);
     }
